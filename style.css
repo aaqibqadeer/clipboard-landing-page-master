@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  /* Colos */
+  --strong-cyan: hsl(171, 66%, 44%);
+  --light-blue: hsl(233, 100%, 69%);
+  --dark-grayish-blue: hsl(210, 10%, 33%);
+  --grayish-blue: hsl(201, 11%, 66%);
+
+  /* Fonts */
+  --fs: 18px;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --ff-bai: 'Bai Jamjuree', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: var(--ff-bai);
+  margin: 0px;
+}
+.container {
+  padding: 2.1rem;
+}
+h1,
+h2,
+h3,
+p,
+div {
+  text-align: center;
+}
+main {
+  background-image: url('./images/bg-header-mobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.main-section {
+  margin-top: 80px;
+}
+
+.logo {
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: var(--dark-grayish-blue);
+  font-weight: var(--fw-bold);
+  margin-bottom: 8px;
+}
+p {
+  color: var(--grayish-blue);
+  opacity: 0.7;
+  margin-bottom: 3fr;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.buttons button {
+  border: none;
+  font-size: 18px;
+  color: white;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1),
+    inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+
+.btn-green {
+  background-color: var(--strong-cyan);
+}
+.btn-purple {
+  background-color: var(--light-blue);
+}
+
+h2,
+h3 {
+  font-size: 1.7rem;
+  color: var(--dark-grayish-blue);
+  font-weight: var(--fw-bold);
+  margin-bottom: 8px;
+}
+h3 {
+  font-size: 1.4rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.section-clients {
+  display: flex;
+  gap: 4rem;
+}
+
+.section-clients img {
+  max-width: 45%;
+}
+
+footer {
+  margin: 0px;
+  background-color: hsl(220, 18%, 97%);
+  padding: 3rem 0rem;
+}
+
+footer img {
+  max-width: 50px;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+}
+
+.social-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 780px) {
+  main {
+    background-image: url('./images/bg-header-desktop.png');
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .buttons button {
+    padding: 1rem 2.5rem;
+  }
+  p {
+    max-width: 550px;
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.4rem;
+    /* font-weight: 500; */
+  }
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .section-features .content p,
+  .section-features .content h3 {
+    text-align: left;
+  }
+  .section-features .inner {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .section-features .inner img {
+    max-width: 55%;
+    margin-left: -60px;
+    margin-right: 5rem;
+  }
+  .section-features .inner > div {
+    max-width: 26%;
+  }
+  .section-clipboard {
+    margin-bottom: 2rem;
+  }
+  .section-clipboard img {
+    max-width: 700px;
+  }
+  .section-clients {
+    flex-direction: row;
+    gap: 4rem 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+
+  .section-features__items {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 4rem;
+    align-items: flex-start;
+  }
+  .section-features__items div p {
+    max-width: 300px;
+  }
+  .section-features__items div {
+    padding: 0px 1rem;
+  }
+  .section-features__items div img {
+    height: 32px;
+  }
+  footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  footer ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  footer ul li {
+    flex-basis: calc(33.33% - 1.8rem);
+    text-align: left;
+    /* max-width: fit-content; */
+  }
+  .social-links ul {
+    margin: 0;
+  }
+  footer img {
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .section-clients {
+    gap: 0rem;
+  }
+}
